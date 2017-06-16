@@ -8,3 +8,4 @@ www/app/*.js
 www/app/*.js.map
 npm-debug*.*
 www/dist
+.idea
