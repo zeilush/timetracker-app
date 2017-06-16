@@ -5,6 +5,7 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { DeviceComponent } from './device/device.component';
+import {TimeEntryComponent} from "./device/childentry.component";
 
 @NgModule({
     imports: [
@@ -14,7 +15,8 @@ import { DeviceComponent } from './device/device.component';
     declarations: [
         AppComponent,
         AboutComponent,
-        DeviceComponent
+        DeviceComponent,
+        TimeEntryComponent
     ],
     bootstrap: [AppComponent]
 })

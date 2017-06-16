@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
+import {TimeEntry} from "./TimeEntry";
 @Component({
-    template: `
-    <h5>Device Component</h5>
-    <button (click)="populateDeviceDetails()">Populate</button>
-    <div [innerHTML]="deviceDetails">
-    </div>
-    `
+    templateUrl: "app/device/device.component.html"
 })
 
 export class DeviceComponent {
+    timeEntry = new TimeEntry("qwert")
+
     private deviceDetails = "";
     populateDeviceDetails() {
         var device:Device = (<any>window).device;

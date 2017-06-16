@@ -7,8 +7,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var TimeEntry_1 = require("./TimeEntry");
 var DeviceComponent = (function () {
     function DeviceComponent() {
+        this.timeEntry = new TimeEntry_1.TimeEntry("qwert");
         this.deviceDetails = "";
     }
     DeviceComponent.prototype.populateDeviceDetails = function () {
@@ -27,7 +29,7 @@ var DeviceComponent = (function () {
 }());
 DeviceComponent = __decorate([
     core_1.Component({
-        template: "\n    <h5>Device Component</h5>\n    <button (click)=\"populateDeviceDetails()\">Populate</button>\n    <div [innerHTML]=\"deviceDetails\">\n    </div>\n    "
+        templateUrl: "app/device/device.component.html"
     })
 ], DeviceComponent);
 exports.DeviceComponent = DeviceComponent;

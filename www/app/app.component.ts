@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app',
     template: `
-    <a [routerLink]="['']">About</a> | <a [routerLink]="['device']">Device</a> <br/>  
+    <a [routerLink]="['about']">About</a> | <a [routerLink]="['device']">Devicess</a> <br/>  
     <router-outlet></router-outlet>`
 })
 

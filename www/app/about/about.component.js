@@ -9,12 +9,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AboutComponent = (function () {
     function AboutComponent() {
+        this.title = "abc";
     }
     return AboutComponent;
 }());
 AboutComponent = __decorate([
     core_1.Component({
-        template: '<h5>Cordova App</h5>'
+        template: '<h5>Cordova App {{title}}</h5>'
     })
 ], AboutComponent);
 exports.AboutComponent = AboutComponent;
