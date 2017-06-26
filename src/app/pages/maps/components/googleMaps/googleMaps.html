@@ -1,0 +1,15 @@
+<ba-card title="Google Maps">
+  <!--<div class="google-maps"></div>-->
+
+  <h1>{{ title }}</h1>
+  <h1>{{ marker.lng }}</h1>
+
+  <!-- this creates a google map on the page with the given lat/lng from -->
+  <!-- the component as the initial center of the map: -->
+  <agm-map [latitude]="marker.lat" [longitude]="marker.lng">
+    <agm-marker #m [latitude]="marker.lat" [longitude]="marker.lng"
+                [markerDraggable]="true" [title]="marker.title"
+                (dragEnd)="markerDragEnd(marker, $event)" ></agm-marker>
+  </agm-map>
+
+</ba-card>
