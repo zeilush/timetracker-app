@@ -7,7 +7,7 @@
     "ng": "ng",
     "rimraf": "rimraf",
     "changelog": "standard-changelog",
-    "start": "ng server --poll 1000 --port 8081 --host 0.0.0.0",
+    "start": "ng server --poll 1000 --port 8081 --host 192.168.56.101",
     "start:hmr": "ng serve --hmr --poll 1000",
     "start:aot": "ng serve --aot",
     "start:prod": "ng serve --prod",

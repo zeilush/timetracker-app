@@ -15,28 +15,6 @@ export const PAGES_MENU = [
         }
       },
       {
-        path: 'editors',
-        data: {
-          menu: {
-            title: 'general.menu.editors',
-            icon: 'ion-edit',
-            selected: false,
-            expanded: false,
-            order: 100,
-          }
-        },
-        children: [
-          {
-            path: 'ckeditor',
-            data: {
-              menu: {
-                title: 'general.menu.ck_editor',
-              }
-            }
-          }
-        ]
-      },
-      {
         path: 'components',
         data: {
           menu: {
@@ -235,30 +213,6 @@ export const PAGES_MENU = [
             data: {
               menu: {
                 title: 'general.menu.google_maps',
-              }
-            }
-          },
-          {
-            path: 'leafletmaps',
-            data: {
-              menu: {
-                title: 'general.menu.leaflet_maps',
-              }
-            }
-          },
-          {
-            path: 'bubblemaps',
-            data: {
-              menu: {
-                title: 'general.menu.bubble_maps',
-              }
-            }
-          },
-          {
-            path: 'linemaps',
-            data: {
-              menu: {
-                title: 'general.menu.line_maps',
               }
             }
           }
