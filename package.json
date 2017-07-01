@@ -8,7 +8,7 @@
     "rimraf": "rimraf",
     "changelog": "standard-changelog",
     "start": "ng server --poll 1000 --port 8081 --host 192.168.56.101",
-    "start:hmr": "ng serve --hmr --poll 1000",
+    "start:hmr": "ng serve --hmr --poll 1000 --port 8081 --host 192.168.56.101",
     "start:aot": "ng serve --aot",
     "start:prod": "ng serve --prod",
     "start:prod:aot": "ng serve --prod --aot",
@@ -79,6 +79,8 @@
   "devDependencies": {
     "@angular/cli": "1.0.4",
     "@angular/compiler-cli": "4.1.3",
+    "@types/cordova": "0.0.34",
+    "@types/cordova-plugin-device": "0.0.3",
     "@types/fullcalendar": "2.7.40",
     "@types/jasmine": "2.5.38",
     "@types/jquery": "2.0.41",
@@ -108,9 +110,7 @@
     "typogr": "0.6.6",
     "underscore": "1.8.3",
     "wintersmith": "2.2.5",
-    "wintersmith-sassy": "1.1.0",
-    "@types/cordova": "0.0.34",
-    "@types/cordova-plugin-device": "0.0.3"
+    "wintersmith-sassy": "1.1.0"
   },
   "cordova": {
     "plugins": {

@@ -16,7 +16,10 @@ export class MarkerService {
     return this.http.post("https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyC8rsyqt4BMNw1KmS9E0CdegqdwFYZvEqQ", null, null)
       .map(res => {
         var result = res.json();
-        return new Marker(result.location.lat, result.location.lng, "1", "primary location")
+
+        console.log("current location", result)
+
+        return new Marker(result.location.lat, result.location.lng, "1", "primary location", "zeilush")
       });
   }
 }

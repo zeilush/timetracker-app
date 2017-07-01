@@ -2,6 +2,7 @@ import {Component, ElementRef, Input, OnInit} from '@angular/core';
 import {Http} from "@angular/http";
 import {Marker} from "./marker";
 import {ActivatedRoute} from "@angular/router";
+import {Observable} from "rxjs/Observable";
 
 @Component({
   selector: 'google-maps',
@@ -24,8 +25,15 @@ export class GoogleMaps implements OnInit {
 
   //event: MouseEvent
   markerDragEnd(marker: Marker, event: any) {
-    this.marker.lng = event.coords.lng
-    this.marker.lat = event.coords.lat
-    console.log(this.marker);
+    this.marker.longitude = event.coords.lng
+    this.marker.latitude = event.coords.lat
+
+    console.log("creating marker", marker);
+
+    this.http.post("http://192.168.56.101:8080/marker", marker)
+      .map(res => res.json())
+      .subscribe(createdMarker => {
+        console.log("created marker {}", createdMarker);
+      })
   }
 }
